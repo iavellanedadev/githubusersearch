@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Repository
+struct Repository: Decodable, Encodable
 {
     let repoName: String?
     

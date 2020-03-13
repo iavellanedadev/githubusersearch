@@ -8,7 +8,17 @@
 
 import Foundation
 
-struct User
+struct UserResults: Decodable, Encodable
+{
+    let results: [User]
+    
+    private enum CodingKeys: String, CodingKey
+    {
+        case results = "items"
+    }
+}
+
+struct User: Decodable, Encodable
 {
     let userName: String?
     

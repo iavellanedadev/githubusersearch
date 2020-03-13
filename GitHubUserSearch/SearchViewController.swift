@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SearchViewController: UIViewController {
     @IBOutlet weak var userTableView: UITableView!
+    
+    let disposeBag = DisposeBag()
+    
+    let vm = ViewModel()
     
     let searchController = UISearchController(searchResultsController: nil)
 
@@ -26,20 +32,21 @@ class SearchViewController: UIViewController {
     {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
+        print("search bar setup")
     }
-
 
 }
 
 extension SearchViewController: UISearchBarDelegate, UISearchResultsUpdating
 {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let search = searchController.searchBar.text else {return}
-        guard let sanitized = search.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
+        guard let search = searchController.searchBar.text, let sanitized = search.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
         
         //grab the users
+        vm.getUsers(sanitized)
     }
 }
 
@@ -50,13 +57,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return vm.users.value.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier, for: indexPath) as! UserTableViewCell
         
+        let user = vm.users.value[indexPath.row]
+        
+        cell.userNameLabel.text = user.userName
         
         return cell
     }

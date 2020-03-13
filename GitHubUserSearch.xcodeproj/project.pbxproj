@@ -14,13 +14,13 @@
 		028BAF1F2419C3A700F8A5CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 028BAF1E2419C3A700F8A5CE /* Assets.xcassets */; };
 		028BAF222419C3A700F8A5CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028BAF202419C3A700F8A5CE /* LaunchScreen.storyboard */; };
 		028BAF2C2419D3C900F8A5CE /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BAF2B2419D3C900F8A5CE /* GithubAPI.swift */; };
-		028BAF2E2419D3E100F8A5CE /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BAF2D2419D3E100F8A5CE /* GitHubService.swift */; };
 		028BAF302419D44C00F8A5CE /* APIClientServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BAF2F2419D44C00F8A5CE /* APIClientServiceBase.swift */; };
 		028BAF322419D45D00F8A5CE /* APIClientContfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BAF312419D45D00F8A5CE /* APIClientContfigurable.swift */; };
 		028BAF342419D56000F8A5CE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BAF332419D56000F8A5CE /* ViewModel.swift */; };
 		028BAF362419D9CB00F8A5CE /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BAF352419D9CB00F8A5CE /* UserTableViewCell.swift */; };
 		028BAF38241A97F200F8A5CE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BAF37241A97F200F8A5CE /* User.swift */; };
 		028BAF3A241A988C00F8A5CE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BAF39241A988C00F8A5CE /* Repository.swift */; };
+		028BAF3C241AB8C300F8A5CE /* GitHubUserSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BAF3B241AB8C300F8A5CE /* GitHubUserSearchService.swift */; };
 		367FC0CAAA309EB65407FC4C /* libPods-GitHubUserSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5D8322756DAE234967F5E7 /* libPods-GitHubUserSearch.a */; };
 /* End PBXBuildFile section */
 
@@ -34,13 +34,13 @@
 		028BAF212419C3A700F8A5CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		028BAF232419C3A700F8A5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028BAF2B2419D3C900F8A5CE /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
-		028BAF2D2419D3E100F8A5CE /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
 		028BAF2F2419D44C00F8A5CE /* APIClientServiceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientServiceBase.swift; sourceTree = "<group>"; };
 		028BAF312419D45D00F8A5CE /* APIClientContfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientContfigurable.swift; sourceTree = "<group>"; };
 		028BAF332419D56000F8A5CE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		028BAF352419D9CB00F8A5CE /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		028BAF37241A97F200F8A5CE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		028BAF39241A988C00F8A5CE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		028BAF3B241AB8C300F8A5CE /* GitHubUserSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserSearchService.swift; sourceTree = "<group>"; };
 		BB5F02179EEA8ADF95258C39 /* Pods-GitHubUserSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserSearch.debug.xcconfig"; path = "Target Support Files/Pods-GitHubUserSearch/Pods-GitHubUserSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		BBAF05BBE62790A4196454CD /* Pods-GitHubUserSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserSearch.release.xcconfig"; path = "Target Support Files/Pods-GitHubUserSearch/Pods-GitHubUserSearch.release.xcconfig"; sourceTree = "<group>"; };
 		EB5D8322756DAE234967F5E7 /* libPods-GitHubUserSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHubUserSearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,13 +87,13 @@
 				028BAF202419C3A700F8A5CE /* LaunchScreen.storyboard */,
 				028BAF232419C3A700F8A5CE /* Info.plist */,
 				028BAF2B2419D3C900F8A5CE /* GithubAPI.swift */,
-				028BAF2D2419D3E100F8A5CE /* GitHubService.swift */,
 				028BAF2F2419D44C00F8A5CE /* APIClientServiceBase.swift */,
 				028BAF312419D45D00F8A5CE /* APIClientContfigurable.swift */,
 				028BAF332419D56000F8A5CE /* ViewModel.swift */,
 				028BAF352419D9CB00F8A5CE /* UserTableViewCell.swift */,
 				028BAF37241A97F200F8A5CE /* User.swift */,
 				028BAF39241A988C00F8A5CE /* Repository.swift */,
+				028BAF3B241AB8C300F8A5CE /* GitHubUserSearchService.swift */,
 			);
 			path = GitHubUserSearch;
 			sourceTree = "<group>";
@@ -212,7 +212,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				028BAF2E2419D3E100F8A5CE /* GitHubService.swift in Sources */,
 				028BAF362419D9CB00F8A5CE /* UserTableViewCell.swift in Sources */,
 				028BAF322419D45D00F8A5CE /* APIClientContfigurable.swift in Sources */,
 				028BAF1A2419C3A100F8A5CE /* SearchViewController.swift in Sources */,
@@ -221,6 +220,7 @@
 				028BAF162419C3A100F8A5CE /* AppDelegate.swift in Sources */,
 				028BAF182419C3A100F8A5CE /* SceneDelegate.swift in Sources */,
 				028BAF342419D56000F8A5CE /* ViewModel.swift in Sources */,
+				028BAF3C241AB8C300F8A5CE /* GitHubUserSearchService.swift in Sources */,
 				028BAF38241A97F200F8A5CE /* User.swift in Sources */,
 				028BAF2C2419D3C900F8A5CE /* GithubAPI.swift in Sources */,
 			);
